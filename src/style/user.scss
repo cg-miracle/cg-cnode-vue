@@ -1,0 +1,112 @@
+ @import '../style/app.scss';
+  $imgW: 70px;
+  $userimgW: 50px;
+  $bannerH :70px;
+  $infoFontsize :15px;
+  #user{
+        margin: 65px 10px 0 10px;
+        /*个人简介*/
+        .user-brief{
+          background-color: #fff;
+          .title{
+            padding: 10px;
+          }
+          .user-info{
+            position: relative;
+            text-align: center;
+            border-top: 1px solid #ececec;
+            .banner{
+              height:   $bannerH;
+              overflow: hidden;
+              img{
+                width: 100%;
+                @include blur(blur(15px))
+              }
+            }
+            /*头像*/
+            .avatar{
+              position: absolute;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              top: 30px;
+              width:  $imgW;
+              height: $imgW;
+              border: 1px solid #ececec;
+              @include radius(50%)
+            }
+            .detail{
+              margin-top: 50px;
+              text-align: left;
+              color: #000;
+              padding: 10px 20px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        /*最近回复*/
+        .user-action{
+          background-color: #fff;
+           margin-top: 30px;
+           .tabs{
+             .item{
+               float:left;
+               width: 50%;
+               font-weight: 700;
+               text-align: center;
+               padding: 12px 0;
+               border-bottom: 1px solid #d4d4d4;
+             }
+             .br{
+               border-right: 1px solid #d4d4d4 ;
+             }
+             .selected{
+               border-bottom:2px solid #80bd01;
+               color: #80bd01;
+             }
+           }
+           .message{
+             padding: 10px;
+             border-bottom: 1px solid #ececec;
+             .user-avatar{
+               width:  $userimgW;
+               height: $userimgW;
+               float: left;
+               @include radius(50%)
+
+             }
+             .info{
+               display: block;
+               padding-left: $userimgW+20px;
+               font-size: $infoFontsize;
+               color:#000;
+               .title{
+                 white-space: nowrap;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+                 margin-bottom: 10px;
+               }
+               .reply-time{
+                float: right;
+                 color: #d4d4d4;
+               }
+             }
+           }
+           .nodata{
+              text-align: center;
+              padding: 100px 0;
+             color: #d4d4d4;
+             font-size: 17px;
+            }
+        }
+
+    }
+      .quit{
+        color: #fff;
+        background-color: #398fd1;
+        padding: 4px 18px;
+        border:1px solid #398fd1;
+        @include radius(4px);
+      }
+      

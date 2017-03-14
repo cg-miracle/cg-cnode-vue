@@ -1,0 +1,28 @@
+@import "../style/app.scss";
+$placeSize: 14px;
+#login{ 
+    .login-body{
+        background-color: #fff;
+        margin-top: 15px;
+        padding: 50px 15px;
+        #token-input{
+            font-size: $placeSize; 
+            margin-top: 30px; 
+            width: 100%;
+            padding: 12px 0;
+            border-bottom:1px solid #4fc08d;
+        }
+        .login-btn{
+            margin-top: 10px; 
+            display: inline-block;
+            width: 100%;
+            background-color: #4fc08d;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            border-bottom:1px solid #4fc08d;
+            @include radius(4px)
+        }
+    }
+      
+  }

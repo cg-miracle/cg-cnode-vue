@@ -1,0 +1,87 @@
+@import "../style/app";
+
+  #article{
+    background-color: #fff;
+    padding: 65px 0 0 0;
+
+  }
+  .content-title{
+    font-size:19px
+  }
+  .content-head{
+    padding:20px 20px 10px 20px;
+    border-bottom: 1px solid #ececec;
+  }
+  .author_avatar{
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 5px;
+    @include radius(50%);
+
+  }
+  .author-info{
+    color: #9d9e9f;
+    margin-top: 10px;
+  }
+  .createTime{
+    margin-left: 15px;
+  }
+  .content{
+    padding: 20px;
+    text-size-adjust: 100%;
+    color: #333;
+    font-family: Helvetica Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+  }
+
+  .content img{
+    width: 100%;
+  }
+  .content blockquote {
+     padding-left: 20px;
+    margin: 0;
+    border-left: 4px solid #e2e3e4;
+  }
+.prettyprint{
+
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+
+}
+  .reply-count{
+    padding: 15px 20px;
+    border-top: 1px solid #ececec;
+
+      strong{
+        color: #42b983;
+      }
+  }
+
+  /*评论层*/
+  .replycell{
+    border-top: 1px solid #ececec;
+    padding: 10px;
+    .user{
+      color: #626262;
+      font-size: 14px;
+      margin-bottom: 10px;
+        img{
+          width: 45px;
+          height: 45px;
+          float: left;
+          @include radius(10px)
+        }
+        .info{
+          padding-left: 65px;
+          padding-top: 6px;
+        }
+    }
+
+  }

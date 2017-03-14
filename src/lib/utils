@@ -1,0 +1,25 @@
+exports.getLastTimeStr=diff=>{
+
+  const minute = 60 * 1000;// 1分钟
+  const hour = 60 * minute;// 1小时
+  const day = 24 * hour;// 1天
+  const month = 31 * day;// 月
+  const year = 12 * month;// 年
+
+  var content = null;
+  if(diff<5*minute /*小于5分钟*/){
+    content = '刚刚'
+  }else if(diff<hour /*小于60分钟*/){
+    content = Math.floor(diff/60/1000)+'分钟前';
+  }else if(diff<day /**/){
+    content = Math.floor(diff/3600/1000)+'小时前'
+  }else if(diff<month){
+    content = Math.floor(diff/24/3600/1000)+'天前'
+  }else if(diff<year /**/){
+    content = Math.floor(diff/day/31)+'月前'
+  }else {
+    content = Math.floor(diff/year)+'年前'
+  }
+
+  return content;
+}

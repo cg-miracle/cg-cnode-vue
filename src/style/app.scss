@@ -1,0 +1,22 @@
+
+/*添加css3前缀*/
+@mixin prefix($property,$value){
+  -webkit-#{$property}: $value;
+  -moz#{$property}: $value;
+  #{$property}: $value
+}
+@mixin radius($value){
+  @include prefix(border-radius,$value)
+}
+
+@mixin blur($value){
+  @include prefix(filter,$value)
+}
+
+.scrollHide{
+  height: 100%;
+  overflow: hidden
+}
+.pull-right{
+  float: right;
+}

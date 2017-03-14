@@ -1,0 +1,72 @@
+  @import "../style/app.scss";
+  $avatarW:40px;
+
+  #artlist{
+    padding-top: 55px;
+    margin: 8px;
+    /*类型选择菜单*/
+    .list-tab{
+      background-color: #fff;
+      margin-bottom: 1em;
+      padding:3px 10px;
+      color: #80bd01;
+      text-align: center;
+      .tabs{
+        display: inline-block;
+        font-size: 13px;
+        padding:5px 15px;
+        @include radius(5px);
+        &.on{
+          background-color: #80bd01;
+          color: #fff;
+        }
+      }
+    }
+    .cell{
+
+        background-color: #fff;
+        padding: 10px 15px;
+        border-bottom: 1px solid #d4d4d4;
+        /*跳转链接*/
+        .link-view{
+          color: #000;
+          .list-status{
+            padding: 5px 6px;
+            font-size: 10px;
+            font-weight: 400;
+            background-color: #e7e7e7;
+            @include radius(6px);
+            &.put_top{
+              color: #fff;
+              background-color: #80bd01;
+            }
+          }
+          .title{
+            width: 85%;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .info-bottom{
+            margin-top: 10px;
+            font-size: 14px;
+            .avatar{
+              width: $avatarW;
+              height: $avatarW;
+              float: left;
+              margin-right: 10px;
+              @include radius(50%)
+            }
+            .n-r{
+              margin-bottom: 5px;
+            }
+            .pull-right{
+              float: right;
+            }
+          }
+        }
+
+    }
+  }
